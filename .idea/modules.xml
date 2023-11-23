@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/nacos-comsumer/nacos-comsumer.iml" filepath="$PROJECT_DIR$/nacos-comsumer/nacos-comsumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nacos-config-center/nacos-config-center.iml" filepath="$PROJECT_DIR$/nacos-config-center/nacos-config-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nacos-provider01/nacos-provider01.iml" filepath="$PROJECT_DIR$/nacos-provider01/nacos-provider01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nacos-provider02/nacos-provider02.iml" filepath="$PROJECT_DIR$/nacos-provider02/nacos-provider02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oepn-feign/oepn-feign.iml" filepath="$PROJECT_DIR$/oepn-feign/oepn-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sentinel/sentinel.iml" filepath="$PROJECT_DIR$/sentinel/sentinel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-learning.iml" filepath="$PROJECT_DIR$/spring-cloud-learning.iml" />
+    </modules>
+  </component>
+</project>

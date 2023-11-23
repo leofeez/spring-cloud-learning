@@ -1,0 +1,16 @@
+server:
+  port: 3377
+  servlet:
+    context-path: /nacos-config-center
+spring:
+  application:
+    name: nacos-config-center
+  cloud:
+    discovery:
+      server-addr: http://localhost:8848
+    config:
+      server-addr: http://localhost:8848 #Nacos作为配置中心地址
+      #指定yaml格式的配置
+      file-extension: yaml
+      # 指定配置中心的group 默认为DEFAULT_GROUP
+      group: CONSUMER_GROUP

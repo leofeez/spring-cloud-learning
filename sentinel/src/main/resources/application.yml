@@ -1,0 +1,46 @@
+server:
+  servlet:
+    context-path: /sentinel-learning
+  port: 8401
+spring:
+  application:
+    name: sentinel-learning
+  cloud:
+    sentinel:
+      enabled: true
+      transport: # 和dashboard 通讯
+        dashboard: localhost:8080
+        port: 8719 # 默认8719端口，键入被占用会自动从8719+1，直到找到未被占用的端口
+      # sentinel 利用nacos持久化
+      datasource:
+        nacos:
+          nacos:
+            server-addr: localhost:8848
+            groupId: DEFAULT
+            dataId: sentinel-learning.json
+            ruleType: flow
+      web-context-unify: false
+
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+ribbon:
+  ReadTimeout: 5000 # 超时时间
+  ConnectTimeout: 5000
+
+logging:
+  level:
+     # openfeign日志以什么级别监控哪个接口
+     com.leofee.learning.sentinel.feign.ProviderFeign: debug
+
+# 开启 sentinel 对 feign 的支持
+feign:
+  sentinel:
+    enabled: true
+service-url:
+  nacos-provider-service: http://nacos-provider
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

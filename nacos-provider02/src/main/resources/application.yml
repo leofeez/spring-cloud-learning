@@ -1,0 +1,18 @@
+server:
+  port: 9002
+  servlet:
+    context-path: /nacos_provider
+
+spring:
+  application:
+    name: nacos-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://localhost:8848
+#        cluster-name: beijing # 北京集群名称
+management:
+  endpoint:
+    web:
+      exposure:
+        include: "*"

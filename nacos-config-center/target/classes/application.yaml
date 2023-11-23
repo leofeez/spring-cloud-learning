@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: dev
+
+
+config:
+  info: hello, nacos config
+  info2: hello, nacos config-2

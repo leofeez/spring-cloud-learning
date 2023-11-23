@@ -1,0 +1,21 @@
+server:
+  port: 9001
+  servlet:
+    context-path: /nacos_provider
+
+spring:
+  application:
+    # 指定 service name
+    name: nacos-provider
+  cloud:
+    nacos:
+      discovery:
+        # nacos 注册中心地址
+        server-addr: http://localhost:8848
+        # 集群名称
+        cluster-name: shanghai
+management:
+  endpoint:
+    web:
+      exposure:
+        include: "*"
