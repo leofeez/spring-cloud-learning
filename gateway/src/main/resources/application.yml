@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    gateway:
+      enabled: true
+      discovery:
+        locator:
+          enabled: false # true 开启自动路由功能，可以根据注册中心中的服务名称自动创建routes
+#      routes:
+#        - id: nacos-provider-route-id # 路由ID，需保证唯一性
+#          uri: http://localhost:9001 # 代表该路由的服务指向地址
+#          predicates: # 断言
+#            - Path=/nacos_provider/** # 路径匹配则进行路由 最终路由的结果
+      routes:
+        - id: nacos-provider-route-id
+          uri: lb://nacos-provider # 可以不暴露服务名称,locator: enable: false 就可以改为false了
+          predicates:
+            - Path=/nacos_provider/**
+  application:
+    name: gateway-learning
+server:
+  port: 9999
